@@ -1,0 +1,14 @@
+com/pingpong/BuildConfig.java
+ com.pingpong.BuildConfig
+com/pingpong/MainActivity.java
+ com.pingpong.MainActivity
+com/pingpong/MainApplication.java
+ com.pingpong.MainApplication
+ com.pingpong.MainApplication$1
+com/pingpong/ReactNativeFlipper.java
+ com.pingpong.ReactNativeFlipper
+ com.pingpong.ReactNativeFlipper$1
+ com.pingpong.ReactNativeFlipper$2
+ com.pingpong.ReactNativeFlipper$2$1
+com/facebook/react/PackageList.java
+ com.facebook.react.PackageList

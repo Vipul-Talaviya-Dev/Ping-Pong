@@ -1,0 +1,6 @@
+module Pods_pingpong {
+  umbrella header "Pods-pingpong-umbrella.h"
+
+  export *
+  module * { export * }
+}
