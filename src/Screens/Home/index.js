@@ -13,9 +13,6 @@ const Home = ({navigation}) => {
   const handleContinue = () => {
     setLoading(true);
 
-    console.log("Player 1", player1);
-    console.log("Player 1", player2);
-
     if ((player1 !== "") & (player2 !== "")) {
       navigation.navigate("game", {
         params: {

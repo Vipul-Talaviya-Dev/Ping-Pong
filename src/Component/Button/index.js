@@ -9,6 +9,7 @@ const ButtonComponent = ({onPress, title, disabled}) => {
         style={styles.buttonWrap}
         onPress={onPress}
         disabled={disabled}
+        testID={'pressMeButton'}
       >
         <Text style={styles.buttonTitle}>{title}</Text>
       </TouchableOpacity>

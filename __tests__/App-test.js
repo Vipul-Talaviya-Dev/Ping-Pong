@@ -1,14 +1,18 @@
-/**
- * @format
- */
-
-import 'react-native';
 import React from 'react';
-import App from '../App';
+import {cleanup, render} from '@testing-library/react-native';
 
-// Note: test renderer must be required after react-native.
-import renderer from 'react-test-renderer';
+import App from '../src/App';
 
-it('renders correctly', () => {
-  renderer.create(<App />);
+afterEach(cleanup);
+
+describe('App', () => {
+  it('should find the button via testId', () => {
+    const testIdName = 'pressMeButton';
+
+    const {getByTestId} = render(<App />);
+
+    const foundButton = getByTestId(testIdName);
+
+    expect(foundButton).toBeTruthy();
+  });
 });
