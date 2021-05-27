@@ -8,17 +8,26 @@ import Button from "../../Component/Button";
 const Home = ({navigation}) => {
   const [player1, setPlayer1] = useState("");
   const [player2, setPlayer2] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleContinue = () => {
+    setLoading(true);
+
     console.log("Player 1", player1);
     console.log("Player 1", player2);
 
-    navigation.navigate("game", {
-      params: {
-        player1: player1,
-        player2: player2,
-      },
-    });
+    if ((player1 !== "") & (player2 !== "")) {
+      navigation.navigate("game", {
+        params: {
+          player1: player1,
+          player2: player2,
+        },
+      });
+
+      setPlayer1("");
+      setPlayer2("");
+      setLoading(false);
+    }
   };
 
   return (
@@ -34,6 +43,9 @@ const Home = ({navigation}) => {
             setName={setPlayer1}
             placeholderName="Enter Player 1"
           />
+          {loading && player1 === "" && (
+            <Text style={{color: "red"}}>Please enter player 1</Text>
+          )}
         </View>
 
         <View style={styles.player2Wrap}>
@@ -43,9 +55,16 @@ const Home = ({navigation}) => {
             setName={setPlayer2}
             placeholderName="Enter Player 2"
           />
+          {loading && player2 === "" && (
+            <Text style={{color: "red"}}>Please enter player 2</Text>
+          )}
         </View>
 
-        <Button title={"Continue"} onPress={handleContinue} />
+        <Button
+          title={"Continue"}
+          onPress={handleContinue}
+          // disabled={(player1 !== "" && player2 !== "") ? false : true}
+        />
       </View>
     </SafeAreaView>
   );

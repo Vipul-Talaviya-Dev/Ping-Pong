@@ -10,7 +10,9 @@ const CardView = ({onPress, count, playerName}) => {
     <View style={styles.container}>
       <View style={styles.mainCardView}>
         <View style={styles.titleWrap}>
-          <Text style={styles.playerName}>{playerName}</Text>
+          <Text style={styles.playerName} numberOfLines={2}>
+            {playerName}
+          </Text>
           <View style={styles.winsWrap}>
             <Text style={styles.winsTitle}> Wins </Text>
           </View>
@@ -21,7 +23,7 @@ const CardView = ({onPress, count, playerName}) => {
         </View>
       </View>
 
-      <AddWinButton onPress={onPress} title={"Add Wins"} />
+      <AddWinButton onPress={onPress} title={"Add Win"} />
     </View>
   );
 };

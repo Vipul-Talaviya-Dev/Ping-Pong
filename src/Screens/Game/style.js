@@ -29,4 +29,42 @@ export default StyleSheet.create({
     alignItems: "center",
     paddingVertical: 30,
   },
+  seperator: {
+    borderBottomWidth: 1,
+    borderStyle: "dashed",
+    borderColor: "grey",
+    paddingVertical: 10,
+    flexDirection: "row",
+  },
+  body: {
+    flex: 1,
+  },
+  winnerWrap: {
+    flexDirection: "row",
+    paddingHorizontal: 20,
+    paddingVertical: 30,
+  },
+  currentWinner: {
+    fontSize: 20,
+    fontWeight: "bold",
+  },
+  currentWinnerName: {
+    fontSize: 20,
+    paddingHorizontal: 20,
+    maxWidth: "60%",
+  },
+  differenceWrap: {
+    flexDirection: "row",
+    paddingHorizontal: 20,
+    paddingVertical: 30,
+  },
+  winDiff: {
+    fontSize: 20,
+    fontWeight: "bold",
+  },
+  winDiffCount: {
+    fontSize: 20,
+    paddingHorizontal: 20,
+    maxWidth: "60%",
+  },
 });

@@ -1,8 +1,8 @@
 import React, {Fragment} from "react";
-import {Text, TouchableOpacity} from "react-native";
+import {Text, View, Image, TouchableOpacity} from "react-native";
 import styles from "./style";
 
-const AddWinsButtonComponent = ({onPress, title}) => {
+const ButtonComponent = ({onPress, title}) => {
   return (
     <Fragment>
       <TouchableOpacity style={styles.buttonWrap} onPress={onPress}>
@@ -12,4 +12,4 @@ const AddWinsButtonComponent = ({onPress, title}) => {
   );
 };
 
-export default AddWinsButtonComponent;
+export default ButtonComponent;

@@ -33,7 +33,6 @@ export default StyleSheet.create({
   },
   winsWrap: {
     marginTop: 4,
-    borderWidth: 0,
     width: "85%",
   },
   winsTitle: {
@@ -41,10 +40,10 @@ export default StyleSheet.create({
     fontSize: 14,
   },
   winCount: {
-    height: 25,
+    height: 35,
     backgroundColor: "red",
     borderWidth: 0,
-    width: 25,
+    width: 35,
     marginLeft: -26,
     alignItems: "center",
     justifyContent: "center",
@@ -55,5 +54,6 @@ export default StyleSheet.create({
   },
   titleWrap: {
     marginLeft: 12,
+    maxWidth: "70%",
   },
 });
